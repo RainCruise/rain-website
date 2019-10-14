@@ -1,0 +1,70 @@
+// Basic Colors
+$white: #ffffff;
+$black: #333333;
+$black-pure: #000000;
+$red: #FF3B3B;
+$red-lighter: #FF5858;
+$gray: #ECECEC;
+$green: #02A388;
+$green-lighter: #0EC7A8;
+
+// Usage Colors
+$primary: #409EFF;
+$link-color: $primary;
+$gray-font-color: #888888;
+$gray-border-color: #D0D0D0;
+
+$transform-center: translate(-50%, -50%);
+
+.full-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.input-with-border-bottom {
+  padding: 0;
+  border: 1px solid #E1E1E1;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) $transform-center;
+  }
+
+  100% {
+    transform: rotate(360deg) $transform-center;
+  }
+}
+
+@keyframes wordsLoop {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(180px - 100%));
+  }
+}
+
+// Length Variables
+$header-height: 70px;
+$footer-height: 464px;
+$desktop-width-max: 1200px;
+
+// Z-Index Variables
+$z-index-header: 500;
+$z-index-modal: 1000;
+$z-index-banner: 998;

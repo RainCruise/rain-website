@@ -1,0 +1,24 @@
+@import './reset.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#app {
+  height: 100vh;
+  min-width: 1200px;
+  overflow: hidden;
+}
+
+.main-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}

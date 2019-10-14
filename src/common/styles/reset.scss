@@ -1,0 +1,41 @@
+#app {
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+
+  .el-menu {
+    width: fit-content;
+    border-right: none;
+    background-color: $primary;
+
+    .el-menu-item-group__title {
+      display: none;
+    }
+
+    &.el-menu--collapse {
+      width: 64px;
+    }
+
+    &:not(.el-menu--collapse) {
+      .el-menu-item {
+        width: 200px;
+      }
+    }
+  }
+
+  .el-main {
+    flex: 1;
+
+    header {
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .iconfont {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 12px;
+  }
+}
