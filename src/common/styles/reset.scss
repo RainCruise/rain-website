@@ -3,22 +3,27 @@
     overflow-x: hidden;
   }
 
-  .el-menu {
-    width: fit-content;
-    border-right: none;
-    background-color: $primary;
+  .el-menu--horizontal {
+    border-bottom: none;
 
-    .el-menu-item-group__title {
+    .el-submenu__icon-arrow {
       display: none;
     }
 
-    &.el-menu--collapse {
-      width: 64px;
+    .el-menu-item, .el-submenu__title {
+      height: $header-height;
+      line-height: $header-height;
+      user-select: none;
+      cursor: pointer;
+
+      &.is-active {
+        border-bottom-color: transparent;
+      }
     }
 
-    &:not(.el-menu--collapse) {
-      .el-menu-item {
-        width: 200px;
+    .el-submenu.is-active {
+      .el-submenu__title {
+        border-bottom-color: transparent;
       }
     }
   }

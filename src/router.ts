@@ -4,6 +4,11 @@ import Home from './views/Home.vue';
 
 Vue.use(Router);
 
+const originalPush: Function = Router.prototype.push;
+Router.prototype.push = function push(location: object) {
+  return originalPush.call(this, location).catch((err: object) => err);
+};
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
