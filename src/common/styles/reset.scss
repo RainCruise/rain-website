@@ -1,4 +1,6 @@
 #app {
+  background-color: $background-color-main;
+
   .el-scrollbar__wrap {
     overflow-x: hidden;
   }
@@ -42,5 +44,9 @@
     color: #fff;
     font-size: 24px;
     margin-right: 12px;
+  }
+
+  img {
+    height: 100%;
   }
 }

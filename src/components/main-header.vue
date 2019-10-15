@@ -1,5 +1,5 @@
 <template>
-  <div class="main-header" :class="{'has-border': isBorderShow}">
+  <div class="main-header" :class="{ 'has-border': isBorderShow }">
     <div class="container">
       <el-menu class="header-wrapper" :router="true" mode="horizontal">
         <el-menu-item index="/">
@@ -31,6 +31,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+const MAX_DISTANCE: number = 48;
+
 @Component({
   name: 'MainHeader'
 })
@@ -41,7 +43,7 @@ export default class MainHeader extends Vue {
     const vm = this;
 
     window.addEventListener('scroll', () => {
-      vm.isBorderShow = window.scrollY > 100;
+      vm.isBorderShow = window.scrollY > MAX_DISTANCE;
     });
   }
 }
@@ -50,11 +52,18 @@ export default class MainHeader extends Vue {
 <style lang="scss">
 .main-header {
   position: fixed;
+  top: 0;
   width: 100%;
-  background-color: $white;
+  background-color: $background-color-main;
+  z-index: $z-index-header;
 
   &.has-border {
+    background-color: $white;
     box-shadow: 0 0 2px 0 $gray-border-color;
+
+    .header-wrapper {
+      background-color: $white;
+    }
   }
 
   .header-wrapper {
@@ -62,6 +71,7 @@ export default class MainHeader extends Vue {
     align-items: center;
     justify-content: space-between;
     height: $header-height;
+    background-color: $background-color-main;
     color: $black;
 
     span {

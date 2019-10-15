@@ -12,11 +12,12 @@ body {
 
 .main-container {
   position: relative;
+  top: $header-height;
   min-height: 100vh;
 }
 
 .container {
-  max-width: $desktop-width-max;
-  margin: 0 auto;
   position: relative;
+  margin: 0 auto;
+  max-width: $desktop-width-max;
 }
